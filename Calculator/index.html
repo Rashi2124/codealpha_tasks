@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NeoCalc</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Background Circles -->
+
+    <div class="circle circle1"></div>
+    <div class="circle circle2"></div>
+    <div class="circle circle3"></div>
+
+    <div class="container">
+
+        <!-- Calculator -->
+
+        <div class="calculator">
+
+            <!-- Top -->
+
+            <div class="top-bar">
+
+                <h1 class="title">NeoCalc</h1>
+
+                <div class="top-buttons">
+
+                    <button id="theme-btn">🌙</button>
+
+                    <button id="sci-btn">SCI</button>
+
+                </div>
+
+            </div>
+
+            <!-- Time -->
+
+            <div class="datetime">
+
+                <span id="time"></span>
+
+            </div>
+
+            <!-- Display -->
+
+            <div class="display">
+
+                <input type="text" id="display" placeholder="0" readonly>
+
+            </div>
+
+            <!-- Calculator Layout -->
+
+            <div class="calc-layout">
+
+                <!-- Normal Calculator -->
+
+                <div class="buttons">
+
+                    <button class="operator red" data-value="AC">AC</button>
+                    <button class="operator" data-value="DEL">DEL</button>
+                    <button class="operator" data-value="%">%</button>
+                    <button class="operator" data-value="/">/</button>
+
+                    <button data-value="7">7</button>
+                    <button data-value="8">8</button>
+                    <button data-value="9">9</button>
+                    <button class="operator" data-value="*">*</button>
+
+                    <button data-value="4">4</button>
+                    <button data-value="5">5</button>
+                    <button data-value="6">6</button>
+                    <button class="operator" data-value="-">-</button>
+
+                    <button data-value="1">1</button>
+                    <button data-value="2">2</button>
+                    <button data-value="3">3</button>
+                    <button class="operator" data-value="+">+</button>
+
+                    <button data-value="0">0</button>
+                    <button data-value=".">.</button>
+                    <button data-value="+/-">±</button>
+                    <button class="operator equal" data-value="=">=</button>
+
+                </div>
+
+                <!-- Scientific Calculator -->
+
+                <div class="scientific-panel" id="scientific-panel">
+
+                    <div class="mode-row">
+
+                        <button id="degBtn" class="mode active">DEG</button>
+
+                        <button id="radBtn" class="mode">RAD</button>
+
+                    </div>
+
+                    <div class="scientific-buttons">
+
+                        <button data-value="sin(">sin</button>
+                        <button data-value="cos(">cos</button>
+                        <button data-value="tan(">tan</button>
+                        <button data-value="asin(">asin</button>
+
+                        <button data-value="acos(">acos</button>
+                        <button data-value="atan(">atan</button>
+                        <button data-value="√">√</button>
+                        <button data-value="∛">∛</button>
+
+                        <button data-value="log(">log</button>
+                        <button data-value="ln(">ln</button>
+                                                <button data-value="^2">x²</button>
+                        <button data-value="^3">x³</button>
+
+                        <button data-value="^">xʸ</button>
+                        <button data-value="π">π</button>
+                        <button data-value="e">e</button>
+                        <button data-value="!">!</button>
+
+                        <button data-value="(">(</button>
+                        <button data-value=")">)</button>
+
+                        <button id="mc">MC</button>
+                        <button id="mr">MR</button>
+                        <button id="mplus">M+</button>
+                        <button id="mminus">M-</button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- History Panel -->
+
+        <div class="history-panel">
+
+            <div class="history-header">
+
+                <h2>🕒 Recent Calculations</h2>
+
+                <button id="clear-history" title="Clear History">
+                    🗑
+                </button>
+
+            </div>
+
+            <ul id="history-list">
+
+                <!-- History will be added by JavaScript -->
+
+            </ul>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
